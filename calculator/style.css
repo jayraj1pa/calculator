@@ -1,0 +1,78 @@
+/* Variables for colors */
+:root {
+    --primary-bg-color: #3A4655;
+    --button-bg-color: #425062;
+    --button-text-color: #fff;
+    --operator-color: #ffbc56;
+    --clear-color: #ff7665;
+    --button-hover-bg: #3e4b5c;
+}
+
+/* Calculator Body */
+.calc-body {
+    width: 275px;
+    margin: auto;
+    min-height: 400px;
+    box-shadow: 0 8px 50px -7px black;
+    background: var(--primary-bg-color);
+}
+
+/* Calculator Display Screen */
+.calc-screen {
+    padding: 1rem;
+}
+
+#calc-operation, #calc-typed {
+    font-size: 1.3rem;
+    text-align: right;
+    padding-bottom: .5rem;
+}
+
+#calc-operation {
+    color: #727B86;
+}
+
+#calc-typed {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Calculator Buttons */
+.calc-button-row {
+    display: table;
+}
+
+.calc-button-row button {
+    display: table-cell;
+    width: 25%;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    height: 65px;
+    font-size: 1.3rem;
+    border: none;
+    border-color: #3C4857;
+    border-width: 1px 1px 0px 0;
+    border-style: solid;
+}
+
+.calc-button-row button.operator {
+    color: var(--operator-color);
+}
+
+.calc-button-row button.ac {
+    color: var(--clear-color);
+}
+
+/* Remove border on every fourth button */
+.calc-button-row button:nth-child(4n) {
+    border-right: none;
+}
+
+.calc-button-row button:active {
+    position: relative;
+    top: 1px;
+}
+
+.calc-button-row button:hover {
+    background: var(--button-hover-bg);
+}
